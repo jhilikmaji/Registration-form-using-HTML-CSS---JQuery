@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="undefined" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>REGISTRATION</h1>
+    <div class="box">
+        <div class="box1">
+          <form id="registrationForm">
+            <div class="sub_box">
+                <div class="lable">First Name</div>
+                <input id="fname" placeholder="Enter your first name" type="text">
+               <br> <span class="error_form" id="fnameErrorMessage"></span>
+            </div>
+            <div class="sub_box">
+                <div class="lable">Last Name</div>
+                <input id="lname" placeholder="Enter your last name" type="text">
+               <br> <span class="error_form" id="lnameErrorMessage"></span>
+            </div>
+            <div class="sub_box">
+                <div class="lable">Date Of Birth</div>
+                <input id="date"  type="date">
+               <br> <span class="error_form" id="dateErrorMessage"></span>
+            </div>
+            <div class="sub_box">
+                <div class="lable">Gender</div>
+                <select id="gender">
+                    <option selected="true" disabled="disabled" id="option1">--Select--</option>
+                    <option id="option2">Male</option>
+                    <option id="option3">Female</option>
+                    <option id="option4">Other</option>
+                </select>
+               <br> <span class="error_form" id="genderErrorMessage"></span>
+            </div>
+            <div class="sub_box">
+                <div class="lable">Address</div>
+                <textarea rows="2" cols="12" type="text" placeholder="Enter your address" id="address" ></textarea>
+               <br> <span class="error_form" id="addressErrorMessage"></span>
+            </div>
+            <div class="sub_box">
+                <div class="lable">Email Id</div>
+                <input id="email" placeholder="Enter your email id" type="email" >
+               <br> <span class="error_form" id="emailErrorMessage"></span>
+            </div>
+            <div class="sub_box">
+                <div class="lable">Phone Number</div>
+                <input id="phone" placeholder="Enter your phone number" type="number">
+               <br> <span class="error_form" id="phoneErrorMessage"></span>
+            </div>
+            <div class="sub_box">
+                <div class="lable">Password</div>
+                <input id="password" placeholder="Enter your password" type="password">
+               <br> <span class="error_form" id="passErrorMessage"></span>
+            </div>
+            <div class="sub_box">
+                <div class="lable">Re enter Password</div>
+                <input id="repassword" placeholder="Re-Enter your password" type="password">
+               <br> <span class="error_form" id="repasswordErrorMessage"></span>
+            </div>
+            <div class="sub_box">
+              <input type="submit" class="button" value="SUBMIT">
+            </div>
+          </form>
+             
+        </div>
+       
+    </div>
+    <script src="index_page.js"></script>
+</body>
+</html>

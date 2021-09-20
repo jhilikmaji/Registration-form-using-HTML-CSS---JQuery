@@ -268,10 +268,12 @@ check_repassword();
 if( cfname==false && clname==false && cdate==false && cgender==false && caddress==false && cemail==false && cphone==false && cpass==false && crepass==false){
    
         alert("You're Successfully Registered");
+        return true;
        
 }
 else{
     alert("please fill the form correctly");
+    return false;
 }
 });
 

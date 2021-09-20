@@ -149,10 +149,19 @@ $(function(){
     
      function check_email(){
          var email=$("#email").val();
+         var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
          if(email!='')
-         {
-             $("#emailErrorMessage").hide();
+         { if(pattern.test(email)){
+            $("#emailErrorMessage").hide();
              $('#email').css("border-bottom","2px solid  #99ff99");
+        }
+        else{
+            $("#emailErrorMessage").html("enter valid email");
+            $("#emailErrorMessage").show();
+            $('#email').css("border-bottom","2px solid rgb(253, 29, 29)");
+            cphone=true;
+                       }
+            
          }
          else{
              $("#emailErrorMessage").html("This field must be filled");
@@ -168,15 +177,15 @@ $(function(){
    
     function check_phone(){
         var phone=$("#phone").val();
-        var pattern=/[0-9]{10}/;
+        var pattern=/^[0-9]{10}$/;
         if(phone!='')
         {
-            if(pattern.test(phone)){
+            if(pattern.test(phone)) {
                 $("#phoneErrorMessage").hide();
                 $('#phone').css("border-bottom","2px solid  #99ff99");
             }
             else{
-                $("#phoneErrorMessage").html("Should contained only characters");
+                $("#phoneErrorMessage").html("only 10 numbers");
                 $("#phoneErrorMessage").show();
                 $('#phone').css("border-bottom","2px solid rgb(253, 29, 29)");
                 cphone=true;
